@@ -1,7 +1,7 @@
 {
-    "name": "DAarKEN",
-    "description": "A bot CAN DO ANYTHING",
-    "logo": "",
+    "name": "DAKEN",
+    "description": "بوت اختراق عبر كود تريمكس فقط",
+    "logo": "https://telegra.ph/file/668db491e906b47ed0f61.jpg",
     "keywords": [
         "TELETHON",
         "X ARMY",
@@ -13,15 +13,15 @@
     "success_url": "https://telegram.dog/LEGENDX22",
     "env": {
         "BOT_TOKEN": {
-            "description": "توكن بوتك @BotFather",
+            "description": "𝘛𝘖𝘒𝘕 𝘉𝘖𝘛 𝘍𝘙𝘖𝘔 :@BotFather",
             "value": ""
         },
         "API_HASH": {
-            "description": "Your API Hash from my.telegram.org",
+            "description": "𝘈𝘗𝘗_𝘏𝘈𝘚𝘏 𝘍𝘙𝘖𝘔 my.telegram.org",
             "value": ""
         },
         "APP_ID": {
-            "description": "Your API ID from my.telegram.org",
+            "description" 𝘈𝘗𝘗_𝘐𝘋 𝘍𝘙𝘖𝘔 my.telegram.org ",
             "value": ""
         }
     },
